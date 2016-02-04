@@ -68,6 +68,7 @@ function popRandom(arr) {
 
 function prepareGame() {
     maxPoints = 0;
+    points = 0;
     $.each(images.pmpa, function (i, url) {
         images.combined.push({src: url, type: 'pmpa'});
     });
