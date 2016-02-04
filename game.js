@@ -104,6 +104,7 @@ function endGame() {
         $('.final .score .maxPoints').html(maxPoints);
         $('.final').fadeIn();
     });
+    ga('send', 'event', 'Game', 'end');
 }
 
 function dumpImages() {
@@ -128,6 +129,7 @@ $(document).ready(function () {
 
         nextImage();
         $('.game').fadeIn();
+        ga('send', 'event', 'Game', 'start');
     });
 
     $('.game .choice').on('click', function () {
@@ -135,5 +137,6 @@ $(document).ready(function () {
             points += 1;
         }
         nextImage();
+        ga('send', 'event', 'Game', 'choice');
     });
 });
