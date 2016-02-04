@@ -57,6 +57,7 @@ function endGame() {
     $('.game').fadeOut(function () {
         alert("Acabou! Você acertou " + points + " de " + maxPoints);
     });
+    $('.start').fadeIn();
 }
 
 function dumpImages() {
