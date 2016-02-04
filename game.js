@@ -144,7 +144,7 @@ $(document).ready(function () {
     $('.final .share').on('click', function () {
         FB.ui({
             method: 'share',
-            href: 'https://dona.to/game',
+            href: 'https://dona.to/game/',
             title: 'Prefeitura ou Catástrofe? Acertei ' + points + ' de ' + maxPoints + ' fotos!',
             caption: 'Você consegue fazer melhor?',
         }, function (response) {});
