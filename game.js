@@ -40,6 +40,19 @@ var images = {
     combined: []
 };
 
+Array.prototype.shuffle = function () {
+    var i = this.length, j, temp;
+    if (i == 0)
+        return this;
+    while (--i) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = this[i];
+        this[i] = this[j];
+        this[j] = temp;
+    }
+    return this;
+}
+
 function randomInt(max, min) {
     return ((min | 0) + Math.random() * (max + 1)) | 0;
 }
@@ -57,12 +70,13 @@ function prepareGame() {
     maxPoints = 0;
     $.each(images.pmpa, function (i, url) {
         images.combined.push({src: url, type: 'pmpa'});
-        maxPoints += 1;
     });
     $.each(images.storm, function (i, url) {
         images.combined.push({src: url, type: 'storm'});
-        maxPoints += 1;
     });
+
+    images.combined = images.combined.shuffle().slice(0, 20);
+    maxPoints = images.combined.length;
 }
 
 function nextImage() {
@@ -71,6 +85,17 @@ function nextImage() {
         endGame();
     }
     $('.game img.image').data('type', current.type).attr('src', current.src);
+    updateProgress();
+}
+
+function updateProgress() {
+    var total = maxPoints;
+    var left = images.combined.length;
+    var elapsed = total - left;
+    var percent = (100 * elapsed) / total;
+
+    $('.game .progress .progress-bar').css('width', percent + '%');
+    $('.game .progress .images-left').html(elapsed + ' / ' + total);
 }
 
 function endGame() {
