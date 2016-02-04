@@ -5,3 +5,8 @@
 .final .score small {
     font-size: 0.5em;
 }
+
+.game .image-box {
+    height: 500px;
+    max-height: 500px;
+}
