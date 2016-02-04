@@ -4,10 +4,33 @@
         <title>Fortunati vs Catástrofe: qual a diferença?</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:image" content="logo.png"> 
+        <meta property="fb:app_id" content="249459592052697"> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '249459592052697',
+                    xfbml: true,
+                    version: 'v2.5'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
         <div class="container">
             <section class="header jumbotron text-center">
                 <h1>Fortunati ou Catástrofe?</h1>
@@ -15,6 +38,8 @@
                 <p class="lead">Será que você consegue diferenciar?</p>
                 <p><button class="btn btn-lg btn-success start" role="button">Iniciar Jogo</button></p>
             </section>
+
+            <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 
             <div class="game hidden">
                 <div class="text-center">
@@ -43,6 +68,8 @@
                     <span class="points"></span>
                     <small>/<span class="maxPoints">31</span></small>
                 </p>
+                
+                <button class="btn btn-lg btn-default share">Compartilhar</button>
                 <button class="btn btn-lg btn-success start" role="button">Jogar Novamente</button>
             </section>
         </div>
