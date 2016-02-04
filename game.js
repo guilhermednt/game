@@ -59,6 +59,17 @@ function endGame() {
     });
 }
 
+function dumpImages() {
+    $('.dump img').remove();
+    $.each(images.pmpa, function (i, url) {
+        $('.dump .pmpa').append('<img src="' + url + '" class="img-responsive">');
+    });
+    $.each(images.storm, function (i, url) {
+        $('.dump .storm').append('<img src="' + url + '" class="img-responsive">');
+    });
+    $('.dump').removeClass('hidden');
+}
+
 $(document).ready(function () {
 
     $.each(images.pmpa, function (i, url) {
