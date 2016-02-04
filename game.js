@@ -53,6 +53,18 @@ function popRandom(arr) {
     }
 }
 
+function prepareGame() {
+    maxPoints = 0;
+    $.each(images.pmpa, function (i, url) {
+        images.combined.push({src: url, type: 'pmpa'});
+        maxPoints += 1;
+    });
+    $.each(images.storm, function (i, url) {
+        images.combined.push({src: url, type: 'storm'});
+        maxPoints += 1;
+    });
+}
+
 function nextImage() {
     var current = popRandom(images.combined);
     if (current === null) {
@@ -63,9 +75,10 @@ function nextImage() {
 
 function endGame() {
     $('.game').fadeOut(function () {
-        alert("Acabou! Você acertou " + points + " de " + maxPoints);
+        $('.final .score .points').html(points);
+        $('.final .score .maxPoints').html(maxPoints);
+        $('.final').fadeIn();
     });
-    $('.start').fadeIn();
 }
 
 function dumpImages() {
@@ -81,19 +94,12 @@ function dumpImages() {
 
 $(document).ready(function () {
 
-    $.each(images.pmpa, function (i, url) {
-        images.combined.push({src: url, type: 'pmpa'});
-        maxPoints += 1;
-    });
-    $.each(images.storm, function (i, url) {
-        images.combined.push({src: url, type: 'storm'});
-        maxPoints += 1;
-    });
-
-    $('.game').removeClass('hidden').hide();
+    $('.hidden').removeClass('hidden').hide();
 
     $('.start').on('click', function () {
-        $(this).fadeOut();
+        prepareGame();
+        $('.header .start').fadeOut();
+        $('.final').fadeOut();
 
         nextImage();
         $('.game').fadeIn();
