@@ -28,6 +28,7 @@ var images = {
         'images/11119823_858789804193778_1890904235_n.jpg',
         'images/11158077_858789867527105_616142091_n.jpg',
         'images/11169036_858789820860443_781564001_n.jpg',
+        'http://p2.trrsf.com.br/image/fget/cf/fit-in/940/627/images.terra.com/2013/02/20/rsporto-alegrecrateraninafreelaesp1.jpg',
     ],
     storm: [
         'http://multimidia.correiodopovo.com.br/thumb.aspx?Caminho=multimidia/2016/01/31/382544.JPG&Tamanho=1024',
@@ -36,6 +37,12 @@ var images = {
         'http://www.mancheteonline.com.br/wp-content/uploads/2016/02/Porto-Alegre-Chuva.jpg',
         'http://s2.glbimg.com/6-YrD29CvKv7TUAgEd3ZBg1Xjtk=/620x465/s.glbimg.com/jo/g1/f/original/2016/02/01/img_1230.jpg',
         'http://s.glbimg.com/jo/g1/f/original/2016/01/31/img_0656.jpg',
+        'http://www.informativo.com.br/uploads/noticia/39974/maior_cor_TEMPORAL_POA1.jpg',
+        'https://farm2.staticflickr.com/1634/24073361243_99cd608902_z.jpg',
+        'http://deolhonotempo.com.br/images/nacional/Porto-Alegre-RS-29-01-16-Fernando-Oliveira_1.jpg',
+        'http://jcrs.uol.com.br/_midias/jpg/2016/02/01/temporal-429492.jpg',
+        'http://s.glbimg.com/jo/g1/f/original/2016/01/31/img_0655.jpg',
+        'http://www.clicrbs.com.br/sites/swf/zh_antes_e_depois_tempestade/assets/depois_3.jpg',
     ],
     combined: []
 };
