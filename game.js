@@ -43,6 +43,7 @@ var images = {
         'http://jcrs.uol.com.br/_midias/jpg/2016/02/01/temporal-429492.jpg',
         'http://s.glbimg.com/jo/g1/f/original/2016/01/31/img_0655.jpg',
         'http://www.clicrbs.com.br/sites/swf/zh_antes_e_depois_tempestade/assets/depois_3.jpg',
+        'https://pbs.twimg.com/media/CaeAw6tXEAAi-bw.jpg:large'
     ],
     combined: []
 };
